@@ -1,7 +1,6 @@
 {% load staticfiles %}
 
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -14,16 +13,16 @@
 </head>
 <body>
     <div class="page-header">
-    <h1><a href="/">Blog django</a></h1>
+        <h1><a href="/">Blog django</a></h1>
     </div>
 
     <div class="content container">
         <div class="row">
             <div class="col-md-8">
-                {% for post in post %}
+                {% for post in posts %}
                 <div class="post">
                     <div class="date">
-                        <p>published: {{ post.published_date }}</p>
+                        <p>published {{ post.published_date }}</p>
                     </div>
                     <h1><a href="">{{ post.title }}</a></h1>
                     <p>{{ post.text }}</p>
